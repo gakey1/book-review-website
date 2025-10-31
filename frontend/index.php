@@ -86,11 +86,15 @@ if (empty($trendingBooks)) {
         ['id' => 5, 'title' => 'Little Women', 'author' => 'Louisa May Alcott', 'cover' => 'assets/images/books/little_women.jpg', 'rating' => 4.1, 'reviews' => 1678, 'genre' => 'Coming-of-Age']
     ];
 }
-    
+
+// Fallback data for other sections if needed
+if (empty($recentReviews)) {
     $recentReviews = [
-        ['user' => 'Demo User', 'avatar' => 'https://via.placeholder.com/50', 'book' => 'Sample Book', 'rating' => 5, 'excerpt' => 'Great book! Really enjoyed reading it...', 'time' => '2 hours ago']
+        ['user' => 'Demo User', 'avatar' => 'assets/images/profiles/default.jpg', 'book' => 'Sample Book', 'rating' => 5, 'excerpt' => 'Great book! Really enjoyed reading it...', 'time' => '2 hours ago']
     ];
-    
+}
+
+if (empty($genres)) {
     $genres = [
         ['name' => 'Romance', 'icon' => 'fa-heart', 'count' => 2341],
         ['name' => 'Thriller', 'icon' => 'fa-mask', 'count' => 1876],

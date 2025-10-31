@@ -11,17 +11,30 @@ $sampleBooks = [
     ['id' => 2, 'title' => 'Atomic Habits', 'author' => 'James Clear', 'cover' => 'atomic_habits.jpg', 'rating' => 4.8, 'reviews' => 3214, 'genre' => 'Self-Help', 'year' => 2018],
     ['id' => 3, 'title' => 'The Great Gatsby', 'author' => 'F. Scott Fitzgerald', 'cover' => 'gatsby.jpg', 'rating' => 4.2, 'reviews' => 1892, 'genre' => 'Classic Literature', 'year' => 1925],
     ['id' => 4, 'title' => 'Gone Girl', 'author' => 'Gillian Flynn', 'cover' => 'gone_girl.jpg', 'rating' => 4.3, 'reviews' => 2156, 'genre' => 'Psychological Thriller', 'year' => 2012],
-    ['id' => 5, 'title' => 'Little Women', 'author' => 'Louisa May Alcott', 'cover' => 'little_women.jpg', 'rating' => 4.1, 'reviews' => 1678, 'genre' => 'Coming-of-Age', 'year' => 1868]
+    ['id' => 5, 'title' => 'Little Women', 'author' => 'Louisa May Alcott', 'cover' => 'little_women.jpg', 'rating' => 4.1, 'reviews' => 1678, 'genre' => 'Coming-of-Age', 'year' => 1868],
+    ['id' => 6, 'title' => 'The Psychology of Money', 'author' => 'Morgan Housel', 'cover' => 'google_GWorEAAAQBAJ.jpg', 'rating' => 4.6, 'reviews' => 1543, 'genre' => 'Finance', 'year' => 2020],
+    ['id' => 7, 'title' => 'Educated', 'author' => 'Tara Westover', 'cover' => 'google_QABREQAAQBAJ.jpg', 'rating' => 4.7, 'reviews' => 2891, 'genre' => 'Memoir', 'year' => 2018],
+    ['id' => 8, 'title' => 'The Seven Husbands of Evelyn Hugo', 'author' => 'Taylor Jenkins Reid', 'cover' => 'google_YL_aEAAAQBAJ.jpg', 'rating' => 4.9, 'reviews' => 3456, 'genre' => 'Historical Fiction', 'year' => 2017],
+    ['id' => 9, 'title' => 'Where the Crawdads Sing', 'author' => 'Delia Owens', 'cover' => 'google_bXp2EQAAQBAJ.jpg', 'rating' => 4.4, 'reviews' => 2675, 'genre' => 'Mystery', 'year' => 2018],
+    ['id' => 10, 'title' => 'Becoming', 'author' => 'Michelle Obama', 'cover' => 'google_iICQDwAAQBAJ.jpg', 'rating' => 4.8, 'reviews' => 4123, 'genre' => 'Biography', 'year' => 2018],
+    ['id' => 11, 'title' => 'The Silent Patient', 'author' => 'Alex Michaelides', 'cover' => 'google_mSwvswEACAAJ.jpg', 'rating' => 4.5, 'reviews' => 1967, 'genre' => 'Psychological Thriller', 'year' => 2019],
+    ['id' => 12, 'title' => 'Pride and Prejudice', 'author' => 'Jane Austen', 'cover' => 'google_s1gVAAAAYAAJ.jpg', 'rating' => 4.3, 'reviews' => 5789, 'genre' => 'Classic Romance', 'year' => 1813]
 ];
 
 // Static genre data
 $genres = [
-    ['genre_name' => 'All Books', 'genre_id' => '', 'book_count' => 5],
+    ['genre_name' => 'All Books', 'genre_id' => '', 'book_count' => 12],
     ['genre_name' => 'Classic Literature', 'genre_id' => 'classic', 'book_count' => 1],
     ['genre_name' => 'Self-Help', 'genre_id' => 'self-help', 'book_count' => 1],
     ['genre_name' => 'Dystopian Fiction', 'genre_id' => 'dystopian', 'book_count' => 1],
-    ['genre_name' => 'Psychological Thriller', 'genre_id' => 'thriller', 'book_count' => 1],
-    ['genre_name' => 'Coming-of-Age', 'genre_id' => 'coming-age', 'book_count' => 1]
+    ['genre_name' => 'Psychological Thriller', 'genre_id' => 'thriller', 'book_count' => 2],
+    ['genre_name' => 'Coming-of-Age', 'genre_id' => 'coming-age', 'book_count' => 1],
+    ['genre_name' => 'Finance', 'genre_id' => 'finance', 'book_count' => 1],
+    ['genre_name' => 'Memoir', 'genre_id' => 'memoir', 'book_count' => 1],
+    ['genre_name' => 'Historical Fiction', 'genre_id' => 'historical', 'book_count' => 1],
+    ['genre_name' => 'Mystery', 'genre_id' => 'mystery', 'book_count' => 1],
+    ['genre_name' => 'Biography', 'genre_id' => 'biography', 'book_count' => 1],
+    ['genre_name' => 'Classic Romance', 'genre_id' => 'romance', 'book_count' => 1]
 ];
 
 // Get filter parameters (static filtering for visual demonstration)

@@ -13,34 +13,9 @@ $genres = [];
 try {
     $db = Database::getInstance();
     
-    // Get trending books (highest rated with good review count)
-    $trendingBooks = $db->fetchAll("
-        SELECT b.book_id as id, b.title, b.author, b.cover_image as cover, 
-               b.avg_rating as rating, b.review_count as reviews, g.genre_name as genre
-        FROM books b
-        LEFT JOIN genres g ON b.genre_id = g.genre_id
-        WHERE b.review_count >= 2
-        ORDER BY (b.avg_rating * 0.7) + (LOG(b.review_count + 1) * 0.3) DESC
-        LIMIT 5
-    ");
-    
-    // Process book covers
-    foreach ($trendingBooks as $index => $book) {
-        if ($book['cover']) {
-            // Check if it's an external URL (Google Books) or local file
-            if (strpos($book['cover'], 'http') === 0) {
-                // It's already an external URL, use as-is
-                $trendingBooks[$index]['cover'] = $book['cover'];
-            } else {
-                // It's a local filename, prepend path
-                $trendingBooks[$index]['cover'] = 'assets/images/books/' . $book['cover'];
-            }
-        } else {
-            $trendingBooks[$index]['cover'] = 'https://via.placeholder.com/200x300/7C3AED/ffffff?text=' . urlencode($book['title']);
-        }
-        $trendingBooks[$index]['rating'] = floatval($book['rating']);
-        $trendingBooks[$index]['reviews'] = intval($book['reviews']);
-    }
+    // Temporarily force static data to show book covers
+    // TODO: Update database books with proper cover_image values
+    $trendingBooks = [];
     
     // Get recent reviews
     $recentReviews = $db->fetchAll("

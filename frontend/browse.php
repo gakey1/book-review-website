@@ -11,19 +11,15 @@ $sampleBooks = [
     ['id' => 2, 'title' => 'Atomic Habits', 'author' => 'James Clear', 'cover' => 'atomic_habits.jpg', 'rating' => 4.8, 'reviews' => 3214, 'genre' => 'Self-Help', 'year' => 2018],
     ['id' => 3, 'title' => 'The Great Gatsby', 'author' => 'F. Scott Fitzgerald', 'cover' => 'gatsby.jpg', 'rating' => 4.2, 'reviews' => 1892, 'genre' => 'Classic Literature', 'year' => 1925],
     ['id' => 4, 'title' => 'Gone Girl', 'author' => 'Gillian Flynn', 'cover' => 'gone_girl.jpg', 'rating' => 4.3, 'reviews' => 2156, 'genre' => 'Psychological Thriller', 'year' => 2012],
-    ['id' => 5, 'title' => 'Little Women', 'author' => 'Louisa May Alcott', 'cover' => 'little_women.jpg', 'rating' => 4.1, 'reviews' => 1678, 'genre' => 'Coming-of-Age', 'year' => 1868],
-    // Duplicate books to fill grid for demonstration
-    ['id' => 6, 'title' => '1984', 'author' => 'George Orwell', 'cover' => '1984.jpg', 'rating' => 4.5, 'reviews' => 2847, 'genre' => 'Dystopian Fiction', 'year' => 1949],
-    ['id' => 7, 'title' => 'Atomic Habits', 'author' => 'James Clear', 'cover' => 'atomic_habits.jpg', 'rating' => 4.8, 'reviews' => 3214, 'genre' => 'Self-Help', 'year' => 2018],
-    ['id' => 8, 'title' => 'The Great Gatsby', 'author' => 'F. Scott Fitzgerald', 'cover' => 'gatsby.jpg', 'rating' => 4.2, 'reviews' => 1892, 'genre' => 'Classic Literature', 'year' => 1925]
+    ['id' => 5, 'title' => 'Little Women', 'author' => 'Louisa May Alcott', 'cover' => 'little_women.jpg', 'rating' => 4.1, 'reviews' => 1678, 'genre' => 'Coming-of-Age', 'year' => 1868]
 ];
 
 // Static genre data
 $genres = [
-    ['genre_name' => 'All Books', 'genre_id' => '', 'book_count' => 8],
-    ['genre_name' => 'Classic Literature', 'genre_id' => 'classic', 'book_count' => 2],
+    ['genre_name' => 'All Books', 'genre_id' => '', 'book_count' => 5],
+    ['genre_name' => 'Classic Literature', 'genre_id' => 'classic', 'book_count' => 1],
     ['genre_name' => 'Self-Help', 'genre_id' => 'self-help', 'book_count' => 1],
-    ['genre_name' => 'Dystopian Fiction', 'genre_id' => 'dystopian', 'book_count' => 2],
+    ['genre_name' => 'Dystopian Fiction', 'genre_id' => 'dystopian', 'book_count' => 1],
     ['genre_name' => 'Psychological Thriller', 'genre_id' => 'thriller', 'book_count' => 1],
     ['genre_name' => 'Coming-of-Age', 'genre_id' => 'coming-age', 'book_count' => 1]
 ];

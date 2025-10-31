@@ -74,12 +74,18 @@ try {
 } catch (Exception $e) {
     // Fallback to static data if database fails
     error_log("Database error on homepage: " . $e->getMessage());
-    
+}
+
+// Use static data with actual book covers if database query returned empty or failed
+if (empty($trendingBooks)) {
     $trendingBooks = [
-        ['id' => 1, 'title' => 'The Enchanted Forest', 'author' => 'Luna Blackwood', 'cover' => 'https://via.placeholder.com/200x300/7C3AED/ffffff?text=Book+1', 'rating' => 4.9, 'reviews' => 2847, 'genre' => 'Fantasy'],
-        ['id' => 2, 'title' => 'Midnight Shadows', 'author' => 'Robert Kane', 'cover' => 'https://via.placeholder.com/200x300/5B21B6/ffffff?text=Book+2', 'rating' => 4.7, 'reviews' => 1923, 'genre' => 'Thriller'],
-        ['id' => 3, 'title' => 'Love in Paris', 'author' => 'Emma Rose', 'cover' => 'https://via.placeholder.com/200x300/C4B5FD/ffffff?text=Book+3', 'rating' => 4.5, 'reviews' => 3214, 'genre' => 'Romance']
+        ['id' => 1, 'title' => '1984', 'author' => 'George Orwell', 'cover' => 'assets/images/books/1984.jpg', 'rating' => 4.9, 'reviews' => 2847, 'genre' => 'Dystopian Fiction'],
+        ['id' => 2, 'title' => 'Atomic Habits', 'author' => 'James Clear', 'cover' => 'assets/images/books/atomic_habits.jpg', 'rating' => 4.7, 'reviews' => 1923, 'genre' => 'Self-Help'],
+        ['id' => 3, 'title' => 'The Great Gatsby', 'author' => 'F. Scott Fitzgerald', 'cover' => 'assets/images/books/gatsby.jpg', 'rating' => 4.5, 'reviews' => 3214, 'genre' => 'Classic Literature'],
+        ['id' => 4, 'title' => 'Gone Girl', 'author' => 'Gillian Flynn', 'cover' => 'assets/images/books/gone_girl.jpg', 'rating' => 4.3, 'reviews' => 2156, 'genre' => 'Psychological Thriller'],
+        ['id' => 5, 'title' => 'Little Women', 'author' => 'Louisa May Alcott', 'cover' => 'assets/images/books/little_women.jpg', 'rating' => 4.1, 'reviews' => 1678, 'genre' => 'Coming-of-Age']
     ];
+}
     
     $recentReviews = [
         ['user' => 'Demo User', 'avatar' => 'https://via.placeholder.com/50', 'book' => 'Sample Book', 'rating' => 5, 'excerpt' => 'Great book! Really enjoyed reading it...', 'time' => '2 hours ago']
@@ -123,13 +129,13 @@ function timeAgo($datetime) {
             </div>
             <div class="col-lg-6 hero-books d-none d-lg-block">
                 <div class="position-relative">
-                    <!-- Decorative book images -->
-                    <img src="https://via.placeholder.com/200x300/ffffff/7C3AED?text=Featured+1" 
-                         class="hero-book" style="left: 50px; top: 20px; transform: rotate(-10deg);" alt="Book">
-                    <img src="https://via.placeholder.com/200x300/ffffff/5B21B6?text=Featured+2" 
-                         class="hero-book" style="left: 200px; top: 0; transform: rotate(5deg);" alt="Book">
-                    <img src="https://via.placeholder.com/200x300/ffffff/C4B5FD?text=Featured+3" 
-                         class="hero-book" style="left: 350px; top: 30px; transform: rotate(-8deg);" alt="Book">
+                    <!-- Decorative book images using actual covers -->
+                    <img src="assets/images/books/1984.jpg" 
+                         class="hero-book" style="left: 50px; top: 20px; transform: rotate(-10deg);" alt="1984">
+                    <img src="assets/images/books/google_iICQDwAAQBAJ.jpg" 
+                         class="hero-book" style="left: 200px; top: 0; transform: rotate(5deg);" alt="Featured Book">
+                    <img src="assets/images/books/gatsby.jpg" 
+                         class="hero-book" style="left: 350px; top: 30px; transform: rotate(-8deg);" alt="The Great Gatsby">
                 </div>
             </div>
         </div>
